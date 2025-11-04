@@ -42,20 +42,21 @@ header .icons img:hover {
 .foto {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: white;
-  padding: 30px 0;
+  padding: 40px 0;
 }
 
 .foto img {
-  width: 360px; /* aumentada (antes era 260px) */
-  max-width: 90%;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  width: 600px; /* bem maior */
+  max-width: 90vw; /* responsivo */
+  border-radius: 14px;
+  box-shadow: 0 0 18px rgba(0,0,0,0.35);
   transition: transform 0.3s ease;
 }
 
 .foto img:hover {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 /* ---------- SEÇÃO GOSTOS ---------- */
@@ -109,7 +110,7 @@ footer a {
     font-size: 1.5em;
   }
   .foto img {
-    width: 250px;
+    width: 90%;
   }
   .item {
     width: 120px;
