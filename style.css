@@ -16,7 +16,7 @@ body {
 
 /* ======== CABEÇALHO ======== */
 header {
-  background-color: #003366; /* azul escuro */
+  background-color: #003366;
   color: #ffffff;
   padding: 20px;
   font-size: 28px;
@@ -42,11 +42,11 @@ header {
   transform: scale(1.2);
 }
 
-/* ======== FOTO PRINCIPAL ======== */
+/* ======== FOTO PRINCIPAL (AGORA RETANGULAR) ======== */
 .foto img {
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
+  width: 420px;
+  height: 280px;
+  border-radius: 20px; /* bordas levemente arredondadas, não círculo */
   object-fit: cover;
   margin: 40px auto;
   border: 5px solid #003366;
@@ -82,7 +82,7 @@ h2 {
   width: 240px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
-  perspective: 1000px; /* ajuda no efeito 3D */
+  perspective: 1000px;
 }
 
 .item:hover {
