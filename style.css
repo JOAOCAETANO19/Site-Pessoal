@@ -1,37 +1,44 @@
-/* ======== ESTILO GERAL ======== */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(180deg, #e0f7fa, #ffffff);
-  color: #000;
-  text-align: center;
+/* ======== RESET GERAL ======== */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+/* ======== COR DE FUNDO E TEXTO ======== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #dcefff, #ffffff);
+  color: #000000;
+  text-align: center;
+  min-height: 100vh;
 }
 
 /* ======== CABEÇALHO ======== */
 header {
-  background-color: #0288d1;
-  color: #fff;
+  background-color: #0056a3; /* azul mais escuro */
+  color: #ffffff;
   padding: 20px;
   font-size: 28px;
   font-weight: bold;
   position: relative;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* ======== ÍCONES ======== */
 .icons {
   position: absolute;
   top: 15px;
   right: 20px;
 }
 
-.icons img {
+.icons a img {
   width: 35px;
   margin: 0 8px;
   transition: transform 0.3s ease;
 }
 
-.icons img:hover {
+.icons a img:hover {
   transform: scale(1.2);
 }
 
@@ -42,18 +49,18 @@ header {
   border-radius: 50%;
   object-fit: cover;
   margin: 40px auto;
-  border: 5px solid #0288d1;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border: 5px solid #0056a3;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
-/* ======== TÍTULO SEÇÃO ======== */
+/* ======== TÍTULOS ======== */
 h2 {
   font-size: 26px;
   margin-top: 30px;
-  color: #01579b;
+  color: #003d7a; /* azul mais escuro */
 }
 
-/* ======== BLOCOS DAS ATIVIDADES ======== */
+/* ======== BLOCOS DE CONTEÚDO ======== */
 .gostos {
   display: flex;
   justify-content: center;
@@ -63,7 +70,7 @@ h2 {
 }
 
 .item {
-  background-color: #e1f5fe;
+  background-color: #e3f2fd;
   border-radius: 20px;
   padding: 15px;
   width: 240px;
@@ -73,7 +80,7 @@ h2 {
 
 .item:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(2, 136, 209, 0.4);
+  box-shadow: 0 0 25px rgba(0, 86, 163, 0.5);
 }
 
 .item img {
@@ -87,26 +94,26 @@ h2 {
   font-size: 16px;
   font-weight: bold;
   margin-top: 10px;
-  color: #0277bd;
+  color: #004c91;
 }
 
 /* ======== RODAPÉ ======== */
 footer {
-  background-color: #0288d1;
+  background-color: #0056a3;
   padding: 25px;
   font-size: 14px;
-  color: #fff;
+  color: #ffffff;
   line-height: 1.6;
-  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.3);
 }
 
 footer a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
 }
 
-/* ======== ANIMAÇÕES DE ENTRADA (SCROLL REVEAL) ======== */
+/* ======== ANIMAÇÃO SCROLL ======== */
 .foto, .item {
   opacity: 0;
   transform: translateY(40px);
