@@ -1,1 +1,112 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+/* ---------- CABEÇALHO ---------- */
+header {
+  background-color: #002366;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 2em;
+  position: relative;
+}
+
+header .icons {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+header .icons a {
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+header .icons img {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+header .icons img:hover {
+  transform: scale(1.2);
+}
+
+/* ---------- FOTO PRINCIPAL ---------- */
+.foto {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: 20px 0;
+}
+
+.foto img {
+  width: 260px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* ---------- SEÇÃO GOSTOS ---------- */
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.8em;
+}
+
+.gostos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 30px;
+}
+
+.item {
+  text-align: center;
+  width: 150px;
+  transition: transform 0.2s ease;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.item img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+
+/* ---------- RODAPÉ ---------- */
+footer {
+  background-color: #002366;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #00bfff;
+  text-decoration: none;
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+@media (max-width: 600px) {
+  header {
+    font-size: 1.5em;
+  }
+  .foto img {
+    width: 200px;
+  }
+  .item {
+    width: 120px;
+  }
+}
 
