@@ -1,69 +1,50 @@
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #1e1e1e, #333);
+  color: #fff;
+  text-align: center;
   margin: 0;
   padding: 0;
-  background-color: #f2f2f2;
 }
 
-/* ---------- CABEÇALHO ---------- */
 header {
-  background-color: #002366;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 2em;
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  font-size: 28px;
+  font-weight: bold;
   position: relative;
 }
 
-header .icons {
+.icons {
   position: absolute;
+  top: 15px;
   right: 20px;
-  top: 20px;
 }
 
-header .icons a {
-  margin-left: 10px;
-  text-decoration: none;
-}
-
-header .icons img {
-  width: 32px;
-  height: 32px;
-  border-radius: 6px;
-  vertical-align: middle;
-  transition: transform 0.2s ease;
-}
-
-header .icons img:hover {
-  transform: scale(1.2);
-}
-
-/* ---------- FOTO PRINCIPAL (AUMENTADA) ---------- */
-.foto {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  padding: 40px 0;
-}
-
-.foto img {
-  width: 600px; /* bem maior */
-  max-width: 90vw; /* responsivo */
-  border-radius: 14px;
-  box-shadow: 0 0 18px rgba(0,0,0,0.35);
+.icons img {
+  width: 35px;
+  margin: 0 8px;
   transition: transform 0.3s ease;
 }
 
-.foto img:hover {
-  transform: scale(1.04);
+.icons img:hover {
+  transform: scale(1.2);
 }
 
-/* ---------- SEÇÃO GOSTOS ---------- */
+.foto img {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 40px auto;
+  border: 4px solid #fff;
+  box-shadow: 0 0 20px #000;
+}
+
 h2 {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 1.8em;
+  font-size: 26px;
+  margin-top: 30px;
 }
 
 .gostos {
@@ -71,48 +52,51 @@ h2 {
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
-  margin: 30px;
+  margin: 40px 0;
 }
 
 .item {
-  text-align: center;
-  width: 150px;
-  transition: transform 0.2s ease;
+  background-color: #222;
+  border-radius: 20px;
+  padding: 15px;
+  width: 240px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .item:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 .item img {
   width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
-/* ---------- RODAPÉ ---------- */
 footer {
-  background-color: #002366;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
+  background-color: #111;
+  padding: 25px;
+  font-size: 14px;
+  color: #bbb;
+  line-height: 1.6;
 }
 
 footer a {
-  color: #00bfff;
+  color: #fff;
   text-decoration: none;
 }
 
-/* ---------- RESPONSIVIDADE ---------- */
-@media (max-width: 600px) {
-  header {
-    font-size: 1.5em;
-  }
-  .foto img {
-    width: 90%;
-  }
-  .item {
-    width: 120px;
-  }
+/* --- Animações de entrada com scroll --- */
+.foto, .item {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.foto.ativo, .item.ativo {
+  opacity: 1;
+  transform: translateY(0);
 }
