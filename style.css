@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(180deg, #1a3d7c, #244b8f);
+  background: linear-gradient(180deg, #0a2a66, #1a3d7c);
   color: #fff;
   text-align: center;
 }
@@ -69,7 +69,7 @@ main {
   transform: translateY(0);
 }
 
-/* SEÇÃO DOS GOSTOS */
+/* GALERIA */
 .gostos {
   display: flex;
   justify-content: center;
