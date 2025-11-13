@@ -1,15 +1,16 @@
-// Seleciona os elementos que vão ganhar animação
+// Faz as imagens aparecerem com efeito suave ao rolar
 const elementos = document.querySelectorAll('.foto, .item');
 
-function revelarAoRolar() {
-  elementos.forEach((el, index) => {
-    const topo = el.getBoundingClientRect().top;
-    if (topo < window.innerHeight - 100) {
-      setTimeout(() => el.classList.add('ativo'), index * 150);
+function animarScroll() {
+  const topoPagina = window.scrollY + window.innerHeight;
+  
+  elementos.forEach(el => {
+    const topoElemento = el.offsetTop;
+    if (topoPagina > topoElemento + 100) {
+      el.classList.add('ativo');
     }
   });
 }
 
-// Executa a função ao rolar a página e ao carregar
-window.addEventListener('scroll', revelarAoRolar);
-window.addEventListener('load', revelarAoRolar);
+window.addEventListener('scroll', animarScroll);
+animarScroll();
