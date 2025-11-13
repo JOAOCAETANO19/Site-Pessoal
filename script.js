@@ -1,16 +1,20 @@
-// Faz as imagens aparecerem com efeito suave ao rolar
-const elementos = document.querySelectorAll('.foto, .item');
+// Faz os elementos aparecerem suavemente ao rolar a página
+function revelarAoRolar() {
+  const elementos = document.querySelectorAll('.foto, .item');
 
-function animarScroll() {
-  const topoPagina = window.scrollY + window.innerHeight;
-  
-  elementos.forEach(el => {
-    const topoElemento = el.offsetTop;
-    if (topoPagina > topoElemento + 100) {
-      el.classList.add('ativo');
+  elementos.forEach((el, index) => {
+    const posicao = el.getBoundingClientRect().top;
+    const alturaJanela = window.innerHeight - 100;
+
+    if (posicao < alturaJanela) {
+      // Adiciona a classe com delay suave para efeito em sequência
+      setTimeout(() => {
+        el.classList.add('ativo');
+      }, index * 150);
     }
   });
 }
 
-window.addEventListener('scroll', animarScroll);
-animarScroll();
+// Executa ao carregar e ao rolar
+window.addEventListener('scroll', revelarAoRolar);
+window.addEventListener('load', revelarAoRolar);
