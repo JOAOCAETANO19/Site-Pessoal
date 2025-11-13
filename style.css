@@ -8,7 +8,8 @@
 /* ======== COR DE FUNDO E TEXTO ======== */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(180deg, #dcefff, #ffffff);
+  background: white;
+  border: 20px solid #cce5ff;
   color: #000000;
   text-align: center;
   min-height: 100vh;
@@ -42,13 +43,16 @@ header {
   transform: scale(1.2);
 }
 
-/* ======== FOTO PRINCIPAL (AGORA RETANGULAR) ======== */
+/* ======== FOTO PRINCIPAL ======== */
+.foto {
+  margin: 40px auto;
+}
+
 .foto img {
   width: 420px;
   height: 280px;
-  border-radius: 20px; /* bordas levemente arredondadas, não círculo */
+  border-radius: 20px;
   object-fit: cover;
-  margin: 40px auto;
   border: 5px solid #003366;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
@@ -57,6 +61,13 @@ header {
 .foto img:hover {
   transform: scale(1.05) rotateY(5deg);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.data {
+  font-size: 18px;
+  font-weight: bold;
+  color: #003366;
+  margin-top: 10px;
 }
 
 /* ======== TÍTULOS ======== */
@@ -82,7 +93,6 @@ h2 {
   width: 240px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
-  perspective: 1000px;
 }
 
 .item:hover {
@@ -108,22 +118,6 @@ h2 {
   font-weight: bold;
   margin-top: 10px;
   color: #003366;
-}
-
-/* ======== RODAPÉ ======== */
-footer {
-  background-color: #003366;
-  padding: 25px;
-  font-size: 14px;
-  color: #ffffff;
-  line-height: 1.6;
-  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.3);
-}
-
-footer a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
 }
 
 /* ======== ANIMAÇÃO SCROLL ======== */
