@@ -5,11 +5,10 @@
   box-sizing: border-box;
 }
 
-/* ======== COR DE FUNDO E TEXTO ======== */
+/* ======== COR DE FUNDO (BRANCO + BORDAS AZUL CLARO) ======== */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: white;
-  border: 20px solid #cce5ff;
+  background: linear-gradient(180deg, #dcefff, #ffffff);
   color: #000000;
   text-align: center;
   min-height: 100vh;
@@ -44,15 +43,12 @@ header {
 }
 
 /* ======== FOTO PRINCIPAL ======== */
-.foto {
-  margin: 40px auto;
-}
-
 .foto img {
   width: 420px;
   height: 280px;
   border-radius: 20px;
   object-fit: cover;
+  margin: 40px auto 10px auto;
   border: 5px solid #003366;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
@@ -63,11 +59,21 @@ header {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
-.data {
-  font-size: 18px;
+/* ======== NASCIMENTO ======== */
+.nascimento {
+  font-size: 20px;
   font-weight: bold;
   color: #003366;
-  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+/* ======== EFEITO DE DIGITAÇÃO ======== */
+#digitando {
+  font-size: 20px;
+  font-weight: bold;
+  color: #003366;
+  height: 28px;
+  letter-spacing: 1px;
 }
 
 /* ======== TÍTULOS ======== */
@@ -77,7 +83,7 @@ h2 {
   color: #00264d;
 }
 
-/* ======== BLOCOS DE CONTEÚDO ======== */
+/* ======== CARDS ======== */
 .gostos {
   display: flex;
   justify-content: center;
@@ -105,12 +111,6 @@ h2 {
   height: 180px;
   border-radius: 12px;
   object-fit: cover;
-  transition: transform 0.6s ease, box-shadow 0.6s ease;
-}
-
-.item img:hover {
-  transform: scale(1.08) rotateY(5deg);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
 }
 
 .item p {
@@ -120,7 +120,7 @@ h2 {
   color: #003366;
 }
 
-/* ======== ANIMAÇÃO SCROLL ======== */
+/* ======== EFEITO AO ROLAR ======== */
 .foto, .item {
   opacity: 0;
   transform: translateY(40px);
