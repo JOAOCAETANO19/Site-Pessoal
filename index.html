@@ -1,70 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Esse Sou Eu</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    Esse Sou Eu
-    <div class="icons">
-      <a href="https://www.whatsapp.com/?lang=pt" target="_blank">
-        <img src="whatsapp.png" alt="WhatsApp">
-      </a>
-      <a href="https://www.instagram.com" target="_blank">
-        <img src="instagram.png" alt="Instagram">
-      </a>
-      <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
-        <img src="facebook.png" alt="Facebook">
-      </a>
-    </div>
-  </header>
+    <!-- Faixa azul escuro no topo -->
+    <header>
+        <h1 class="typing"></h1>
+    </header>
 
-  <!-- FRASE COM MÁQUINA DE ESCREVER -->
-  <h1 id="typewriter" class="fade-item"></h1>
+    <!-- Foto principal + data -->
+    <section class="principal-container fade-in">
+        <img src="principal.jpg" alt="Minha Foto" class="principal">
+        <p class="data">19/03/2009</p>
+    </section>
 
-  <div class="foto fade-item">
-    <img src="principal.jpg" alt="Foto pessoal">
-    <p class="nascimento">Nascimento: <b>19/03/2009</b></p>
-  </div>
+    <!-- Cards -->
+    <section class="cards">
 
-  <h2 class="fade-item">Coisas Que Eu Gosto De Fazer</h2>
+        <div class="item fade-in">
+            <img src="couto.jpg" alt="Couto Pereira">
+            <h3>Ir ao Couto Pereira</h3>
+        </div>
 
-  <div class="gostos">
+        <div class="item fade-in">
+            <img src="musica.jpg" alt="Músicas">
+            <h3>Escutar Músicas</h3>
+        </div>
 
-    <div class="item fade-item">
-      <a href="https://www.netflix.com/search?q=d" target="_blank">
-        <img src="filmes.jpg" alt="Assistir Filmes">
-      </a>
-      <p>Assistir Filmes</p>
-    </div>
+        <div class="item fade-in">
+            <img src="filmes.jpg" alt="Filmes">
+            <h3>Assistir Filmes</h3>
+        </div>
 
-    <div class="item fade-item">
-      <a href="https://pt.wikipedia.org/wiki/Est%C3%A1dio_Major_Ant%C3%B4nio_Couto_Pereira" target="_blank">
-        <img src="couto.jpg" alt="Ir ao Couto Pereira">
-      </a>
-      <p>Ir ao Couto Pereira</p>
-    </div>
+        <div class="item fade-in">
+            <img src="jogar.jpg" alt="Jogar">
+            <h3>Jogar</h3>
+        </div>
 
-    <div class="item fade-item">
-      <a href="https://open.spotify.com/intl-pt" target="_blank">
-        <img src="musica.jpg" alt="Escutar Músicas">
-      </a>
-      <p>Escutar Músicas</p>
-    </div>
+    </section>
 
-    <div class="item fade-item">
-      <a href="https://playvalorant.com/pt-br" target="_blank">
-        <img src="jogar.jpg" alt="Jogar">
-      </a>
-      <p>Jogar</p>
-    </div>
-
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

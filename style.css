@@ -1,129 +1,89 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* FUNDO BRANCO + BORDAS AZUL ESCURO */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: white;
-  color: #000;
-  text-align: center;
-  min-height: 100vh;
-  border-left: 30px solid #003366;
-  border-right: 30px solid #003366;
+    margin: 0;
+    padding: 0;
+    background: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+    border-left: 12px solid #002d72;
+    border-right: 12px solid #002d72;
 }
 
-/* TOPO - AZUL ESCURO */
+/* faixa superior */
 header {
-  background-color: #003366;
-  color: white;
-  padding: 20px;
-  font-size: 28px;
-  font-weight: bold;
-  position: relative;
+    background: #002d72;
+    padding: 22px;
+    color: white;
 }
 
-/* ÍCONES */
-.icons {
-  position: absolute;
-  top: 15px;
-  right: 20px;
+/* texto da máquina de escrever */
+.typing {
+    font-size: 32px;
+    font-weight: bold;
 }
 
-.icons a img {
-  width: 35px;
-  margin: 0 8px;
-  transition: transform 0.3s ease;
+/* foto principal */
+.principal-container {
+    margin-top: 20px;
 }
 
-.icons a img:hover {
-  transform: scale(1.2);
+.principal {
+    width: 220px;
+    height: 220px;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.45s, box-shadow 0.45s;
+    transform-style: preserve-3d;
 }
 
-/* MÁQUINA DE ESCREVER */
-#typewriter {
-  font-size: 32px;
-  margin: 20px 0;
-  color: #003366;
-  font-weight: bold;
-  border-right: 3px solid #003366;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  white-space: nowrap;
-  overflow: hidden;
+.data {
+    font-size: 18px;
+    margin-top: 10px;
 }
 
-/* FOTO PRINCIPAL */
-.foto img {
-  width: 420px;
-  height: 280px;
-  border-radius: 20px;
-  object-fit: cover;
-  margin: 30px auto;
-  border: 5px solid #003366;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-}
-
-.nascimento {
-  font-size: 20px;
-  margin-top: -15px;
-  color: #003366;
-}
-
-/* TÍTULOS */
-h2 {
-  font-size: 26px;
-  color: #003366;
-  margin-top: 20px;
-}
-
-/* ITENS */
-.gostos {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin: 40px 0;
+/* cards */
+.cards {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
 }
 
 .item {
-  background: #e3f2fd;
-  padding: 15px;
-  border-radius: 20px;
-  width: 240px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-  transition: transform 0.5s ease;
+    width: 230px;
+    perspective: 900px;
 }
 
-.item:hover {
-  transform: scale(1.07);
-}
-
+/* estilo das imagens do card */
 .item img {
-  width: 100%;
-  height: 180px;
-  border-radius: 12px;
-  object-fit: cover;
+    width: 100%;
+    height: 160px;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.45s, box-shadow 0.45s;
+    transform-style: preserve-3d;
 }
 
-.item p {
-  font-weight: bold;
-  margin-top: 10px;
-  color: #003366;
+/* textos dos cards */
+.item h3 {
+    margin-top: 10px;
 }
 
-/* ANIMAÇÃO DE APARIÇÃO */
-.fade-item {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+/* --- efeitos 3D principal --- */
+.principal:hover,
+.item:hover img {
+    transform: scale(1.07) rotateY(8deg) translateZ(12px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.3);
 }
 
-.fade-item.ativo {
-  opacity: 1;
-  transform: translateY(0);
+/* fade-in suavizado */
+.fade-in {
+    opacity: 0;
+    animation: fade 1.3s ease-out forwards;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
 }
