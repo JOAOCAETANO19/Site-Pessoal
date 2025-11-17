@@ -58,6 +58,10 @@ header {
 }
 
 /* FOTO PRINCIPAL */
+.foto {
+  perspective: 900px;
+}
+
 .foto img {
   width: 420px;
   height: 280px;
@@ -66,8 +70,16 @@ header {
   margin: 30px auto;
   border: 5px solid #003366;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+  transform-style: preserve-3d;
 }
 
+.foto:hover img {
+  transform: scale(1.08) rotateY(8deg) translateZ(18px);
+  box-shadow: 0 30px 45px rgba(0, 0, 0, 0.45);
+}
+
+/* DATA DE NASCIMENTO */
 .nascimento {
   font-size: 20px;
   margin-top: -15px;
@@ -96,11 +108,13 @@ h2 {
   border-radius: 20px;
   width: 240px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-  transition: transform 0.5s ease;
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+  perspective: 900px;
 }
 
 .item:hover {
-  transform: scale(1.07);
+  transform: scale(1.07) rotateY(6deg);
+  box-shadow: 0 20px 30px rgba(0, 51, 102, 0.35);
 }
 
 .item img {
@@ -108,6 +122,12 @@ h2 {
   height: 180px;
   border-radius: 12px;
   object-fit: cover;
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.item img:hover {
+  transform: scale(1.08) rotateY(6deg);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
 }
 
 .item p {
@@ -116,7 +136,7 @@ h2 {
   color: #003366;
 }
 
-/* ANIMAÇÃO DE APARIÇÃO */
+/* ANIMAÇÃO DE APARIÇÃO (FADE-IN SUAVE) */
 .fade-item {
   opacity: 0;
   transform: translateY(30px);
