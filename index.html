@@ -1,73 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Esse Sou Eu</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    Esse Sou Eu
-    <div class="icons">
-      <a href="https://www.whatsapp.com/?lang=pt" target="_blank">
-        <img src="whatsapp.png" alt="WhatsApp">
-      </a>
-      <a href="https://www.instagram.com" target="_blank">
-        <img src="instagram.png" alt="Instagram">
-      </a>
-      <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
-        <img src="facebook.png" alt="Facebook">
-      </a>
-    </div>
-  </header>
+    <header>
+        <div class="social">
+            <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+                <img src="facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.whatsapp.com/?lang=pt" target="_blank">
+                <img src="whatsapp.png" alt="WhatsApp">
+            </a>
+        </div>
+    </header>
 
-  <!-- FRASE DIGITADA -->
-  <h1 id="digitar"></h1>
+    <main>
 
-  <!-- FOTO + DATA -->
-  <div class="foto-container">
-    <div class="foto">
-      <img src="principal.jpg" alt="Foto pessoal">
-    </div>
-    <p class="data-nascimento">19/03/2009</p>
-  </div>
+        <h1 id="typing"></h1>
 
-  <h2>Coisas Que Eu Gosto De Fazer</h2>
+        <div class="principal fade-in">
+            <img src="principal.jpg" alt="Minha Foto">
+            <p class="nascimento">Nascimento: <strong>19/03/2009</strong></p>
+        </div>
 
-  <div class="gostos">
+        <div class="opcoes">
 
-    <div class="item">
-      <a href="https://www.netflix.com/search?q=d" target="_blank">
-        <img src="filmes.jpg" alt="Assistir Filmes">
-      </a>
-      <p>Assistir Filmes</p>
-    </div>
+            <a href="https://pt.wikipedia.org/wiki/Estádio_Major_Antônio_Couto_Pereira" target="_blank">
+                <img src="coutop.png" class="foto fade-in" alt="Couto Pereira">
+                <p>Couto Pereira</p>
+            </a>
 
-    <div class="item">
-      <a href="https://pt.wikipedia.org/wiki/Estádio_Major_Antônio_Couto_Pereira" target="_blank">
-        <img src="couto.jpg" alt="Ir no Couto Pereira">
-      </a>
-      <p>Ir no Couto Pereira</p>
-    </div>
+            <a href="https://open.spotify.com/intl-pt" target="_blank">
+                <img src="musicas.png" class="foto fade-in" alt="Músicas">
+                <p>Músicas</p>
+            </a>
 
-    <div class="item">
-      <a href="https://open.spotify.com/intl-pt" target="_blank">
-        <img src="musica.jpg" alt="Escutar Músicas">
-      </a>
-      <p>Escutar Músicas</p>
-    </div>
+            <a href="https://www.netflix.com/search?q=d" target="_blank">
+                <img src="filmes.png" class="foto fade-in" alt="Filmes">
+                <p>Filmes</p>
+            </a>
 
-    <div class="item">
-      <a href="https://playvalorant.com/pt-br" target="_blank">
-        <img src="jogar.jpg" alt="Jogar">
-      </a>
-      <p>Jogar</p>
-    </div>
+            <a href="https://playvalorant.com/pt-br" target="_blank">
+                <img src="jogar.png" class="foto fade-in" alt="Jogar">
+                <p>Jogar</p>
+            </a>
 
-  </div>
+        </div>
 
-  <script src="script.js"></script>
+    </main>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
