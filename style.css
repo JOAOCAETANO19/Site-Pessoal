@@ -1,56 +1,87 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #0A2A43; /* azul escuro */
-    color: white;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+/* reset */
+*{box-sizing:border-box;margin:0;padding:0}
+
+/* página: fundo branco com bordas laterais azul-claro */
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background:#ffffff;
+  color:#111;
+  text-align:center;
+  min-height:100vh;
+  border-left:26px solid #cce8ff;   /* bordas laterais azul-claro */
+  border-right:26px solid #cce8ff;
 }
 
-/* Fade suave */
-.fade {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1.5s forwards;
+/* barra superior azul-escuro (como antes) */
+.topbar{
+  background:#00264d;   /* azul escuro */
+  color:#fff;
+  padding:14px 0;
+  box-shadow:0 4px 8px rgba(0,0,0,0.12);
+}
+.top-inner{
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  padding:0 16px;
+}
+.top-inner .title{ font-weight:800; font-size:20px; color:#fff; }
+.top-inner .icons{ position:absolute; right:16px; top:6px; }
+.top-inner .icons img{ width:34px; margin-left:10px; transition: transform .2s; }
+.top-inner .icons img:hover{ transform:scale(1.12) }
+
+/* Typing (máquina de escrever) - aparece logo abaixo da topbar */
+.typing{
+  margin-top:18px;
+  font-size:34px;
+  font-weight:800;
+  color:#00264d;  /* texto em azul escuro para contraste */
+  min-height:44px; /* evita pular enquanto digita */
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* HERO - foto principal */
+.hero{ margin-top:12px; display:flex; flex-direction:column; align-items:center; gap:8px; padding:0 16px; }
+.principal{
+  width:320px;           /* tamanho controlado */
+  height:220px;
+  object-fit:cover;
+  border-radius:16px;
+  border:5px solid #b7d9ff; /* borda suave ao redor da foto */
+  box-shadow:0 12px 28px rgba(0,0,0,0.12);
+  transition: transform .35s, box-shadow .35s;
 }
+.principal:hover{ transform:scale(1.02); box-shadow:0 20px 36px rgba(0,0,0,0.18) }
 
-/* Foto principal */
-.foto-principal {
-    width: 280px;
-    border-radius: 15px;
-    margin-top: 20px;
-    box-shadow: 0 0 15px black;
+.nascimento{ margin-top:6px; color:#003366; font-weight:600; }
+
+/* seção título */
+.section-title{ margin-top:22px; color:#003366; font-size:20px; }
+
+/* GALLERY - cards menores */
+.gallery{
+  margin-top:14px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  padding:18px;
 }
+.card{ width:150px; text-align:center; }
+.card img{ width:140px; height:100px; object-fit:cover; border-radius:12px; box-shadow:0 8px 18px rgba(0,0,0,0.12); transition: transform .28s, box-shadow .28s; }
+.card img:hover{ transform:scale(1.08); box-shadow:0 14px 28px rgba(0,0,0,0.18) }
+.card p{ margin-top:8px; color:#003366; font-weight:700 }
 
-/* Ícones */
-.item img {
-    width: 90px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px black;
-}
+/* FADE-IN base (invisível até JS adicionar .ativo) */
+.fade-item{ opacity:0; transform:translateY(18px); transition: opacity .6s ease-out, transform .6s ease-out; }
+.fade-item.ativo{ opacity:1; transform:translateY(0); }
 
-.container-itens {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 35px;
-    flex-wrap: wrap;
-}
-
-/* Máquina de escrever (aplicada via JS) */
-#typewriter {
-    display: inline-block;
-    margin-top: 20px;
-    font-size: 36px;
-    border-right: 3px solid white;
-    white-space: nowrap;
-    overflow: hidden;
-    padding-right: 5px;
+/* responsivo */
+@media (max-width:700px){
+  .principal{ width:86vw; height:auto; }
+  .card{ width:40vw }
+  .card img{ width:100%; height:auto }
+  .typing{ font-size:22px; min-height:32px }
 }
