@@ -1,118 +1,124 @@
-/* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* FUNDO BRANCO + BORDAS AZUIS */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
-    text-align: center;
-    border-left: 40px solid #a7d5ff;
-    border-right: 40px solid #a7d5ff;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #c7e3ff, #ffffff);
+  color: #000;
+  text-align: center;
+  min-height: 100vh;
 }
 
-/* CABEÇALHO */
+/* HEADER */
 header {
-    background-color: #003366;
-    color: white;
-    padding: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    position: relative;
+  background-color: #003366;
+  color: #fff;
+  padding: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  position: relative;
 }
 
 .icons {
-    position: absolute;
-    right: 20px;
-    top: 15px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
 }
 
 .icons img {
-    width: 35px;
-    margin-left: 10px;
-    transition: 0.3s;
+  width: 35px;
+  margin: 0 8px;
+  transition: 0.3s;
 }
 
 .icons img:hover {
-    transform: scale(1.15);
+  transform: scale(1.2);
 }
 
-/* IMAGEM PRINCIPAL + TEXTO DIGITADO */
-.imagem-container {
-    position: relative;
-    display: inline-block;
+/* FRASE DIGITADA */
+#digitar {
+  font-size: 32px;
+  margin-top: 25px;
+  color: #00264d;
+  min-height: 40px;
 }
 
-.imagem-principal {
-    width: 320px;
-    border-radius: 20px;
-    margin-top: 30px;
+/* FOTO + DATA */
+.foto-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
 }
 
-.texto-sobre-imagem {
-    position: absolute;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 28px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 3px 3px 8px black;
-    width: 90%;
+.foto img {
+  width: 420px;
+  height: 280px;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 5px solid #003366;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  transition: 0.5s;
+}
+
+.foto img:hover {
+  transform: scale(1.05) rotateY(5deg);
 }
 
 .data-nascimento {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
+  color: #003366;
+  margin-top: 10px;
 }
 
 /* TÍTULO */
 h2 {
-    margin-top: 30px;
-    font-size: 26px;
+  font-size: 26px;
+  margin-top: 40px;
+  color: #00264d;
 }
 
 /* ITENS */
 .gostos {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 40px 0;
 }
 
 .item {
-    background: #e3f2fd;
-    padding: 15px;
-    border-radius: 20px;
-    width: 210px;
-    box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
-    transition: 0.4s;
+  background-color: #e3f2fd;
+  width: 240px;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
 }
 
 .item:hover {
-    transform: scale(1.07);
-    box-shadow: 0px 0px 18px rgba(0,0,0,0.4);
+  transform: scale(1.07) rotateY(5deg);
 }
 
 .item img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 15px;
-    transition: 0.3s;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.6s;
 }
 
 .item img:hover {
-    transform: scale(1.1);
+  transform: scale(1.08) rotateY(5deg);
 }
 
 .item p {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: bold;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #003366;
 }
