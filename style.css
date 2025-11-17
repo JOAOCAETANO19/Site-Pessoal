@@ -16,7 +16,7 @@ body {
   border-right: 30px solid #003366;
 }
 
-/* TOPO - AZUL ESCURO */
+/* TOPO */
 header {
   background-color: #003366;
   color: white;
@@ -44,17 +44,23 @@ header {
 }
 
 /* MÁQUINA DE ESCREVER */
-#typewriter {
-  font-size: 32px;
-  margin: 20px 0;
+#typewriter, #subTypewriter {
   color: #003366;
   font-weight: bold;
   border-right: 3px solid #003366;
   width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px auto;
   white-space: nowrap;
   overflow: hidden;
+}
+
+#typewriter {
+  font-size: 32px;
+}
+
+#subTypewriter {
+  font-size: 20px;
+  margin-top: -10px;
 }
 
 /* FOTO PRINCIPAL */
@@ -86,7 +92,7 @@ header {
   color: #003366;
 }
 
-/* TÍTULOS */
+/* TÍTULO */
 h2 {
   font-size: 26px;
   color: #003366;
@@ -136,7 +142,7 @@ h2 {
   color: #003366;
 }
 
-/* ANIMAÇÃO DE APARIÇÃO (FADE-IN SUAVE) */
+/* ANIMAÇÃO DE APARIÇÃO */
 .fade-item {
   opacity: 0;
   transform: translateY(30px);
