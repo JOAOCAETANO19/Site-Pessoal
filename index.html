@@ -1,67 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Esse Sou Eu</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header class="topbar">
-    <div class="top-inner">
-      <div class="title">Esse Sou Eu</div>
-      <div class="icons">
-        <a href="https://www.facebook.com/?locale=pt_BR" target="_blank"><img src="facebook.png" alt="Facebook"></a>
-        <a href="https://www.instagram.com" target="_blank"><img src="instagram.png" alt="Instagram"></a>
-        <a href="https://www.whatsapp.com/?lang=pt" target="_blank"><img src="whatsapp.png" alt="WhatsApp"></a>
-      </div>
+  <header>
+    Esse Sou Eu
+    <div class="icons">
+      <a href="https://www.whatsapp.com/?lang=pt" target="_blank">
+        <img src="whatsapp.png" alt="WhatsApp">
+      </a>
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="instagram.png" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+        <img src="facebook.png" alt="Facebook">
+      </a>
     </div>
   </header>
 
-  <!-- TYPING (máquina de escrever) - adicionei no topo da área de conteúdo -->
-  <main>
-    <h1 id="typing" class="typing"></h1>
+  <!-- FRASE COM MÁQUINA DE ESCREVER -->
+  <h1 id="typewriter" class="fade-item"></h1>
 
-    <!-- FOTO PRINCIPAL -->
-    <section class="hero">
-      <img src="principal.jpg" alt="Foto principal" class="principal fade-item">
-      <p class="nascimento">19/03/2009 — Minha data de nascimento</p>
-    </section>
+  <div class="foto fade-item">
+    <img src="principal.jpg" alt="Foto pessoal">
+    <p class="nascimento">Nascimento: <b>19/03/2009</b></p>
+  </div>
 
-    <h2 class="section-title">Coisas Que Eu Gosto De Fazer</h2>
+  <h2 class="fade-item">Coisas Que Eu Gosto De Fazer</h2>
 
-    <!-- GALERIA -->
-    <section class="gallery">
-      <div class="card fade-item">
-        <a href="https://pt.wikipedia.org/wiki/Est%C3%A1dio_Major_Ant%C3%B4nio_Couto_Pereira" target="_blank">
-          <img src="couto.jpg" alt="Couto Pereira">
-          <p>Couto Pereira</p>
-        </a>
-      </div>
+  <div class="gostos">
 
-      <div class="card fade-item">
-        <a href="https://open.spotify.com/intl-pt" target="_blank">
-          <img src="musica.jpg" alt="Músicas">
-          <p>Músicas</p>
-        </a>
-      </div>
+    <div class="item fade-item">
+      <a href="https://www.netflix.com/search?q=d" target="_blank">
+        <img src="filmes.jpg" alt="Assistir Filmes">
+      </a>
+      <p>Assistir Filmes</p>
+    </div>
 
-      <div class="card fade-item">
-        <a href="https://www.netflix.com/search?q=d" target="_blank">
-          <img src="filmes.jpg" alt="Filmes">
-          <p>Filmes</p>
-        </a>
-      </div>
+    <div class="item fade-item">
+      <a href="https://pt.wikipedia.org/wiki/Est%C3%A1dio_Major_Ant%C3%B4nio_Couto_Pereira" target="_blank">
+        <img src="couto.jpg" alt="Ir ao Couto Pereira">
+      </a>
+      <p>Ir ao Couto Pereira</p>
+    </div>
 
-      <div class="card fade-item">
-        <a href="https://playvalorant.com/pt-br" target="_blank">
-          <img src="jogar.jpg" alt="Jogar">
-          <p>Jogar</p>
-        </a>
-      </div>
-    </section>
-  </main>
+    <div class="item fade-item">
+      <a href="https://open.spotify.com/intl-pt" target="_blank">
+        <img src="musica.jpg" alt="Escutar Músicas">
+      </a>
+      <p>Escutar Músicas</p>
+    </div>
+
+    <div class="item fade-item">
+      <a href="https://playvalorant.com/pt-br" target="_blank">
+        <img src="jogar.jpg" alt="Jogar">
+      </a>
+      <p>Jogar</p>
+    </div>
+
+  </div>
 
   <script src="script.js"></script>
 </body>
