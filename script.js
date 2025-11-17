@@ -1,36 +1,17 @@
-// ANIMAÇÃO AO ROLAR
-function revelarAoRolar() {
-  const elementos = document.querySelectorAll('.foto, .item');
+// Texto que será digitado
+const texto = "Bem-vindo ao meu site!";
+let index = 0;
+const velocidade = 80;
 
-  elementos.forEach((el, index) => {
-    const pos = el.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight - 100;
+// Função de digitação
+function digitar() {
+    const elemento = document.getElementById("texto-digitado");
 
-    if (pos < windowHeight) {
-      setTimeout(() => {
-        el.classList.add('ativo');
-      }, index * 150);
+    if (index < texto.length) {
+        elemento.textContent += texto.charAt(index);
+        index++;
+        setTimeout(digitar, velocidade);
     }
-  });
 }
 
-window.addEventListener('scroll', revelarAoRolar);
-window.addEventListener('load', revelarAoRolar);
-
-// EFEITO DE DIGITAÇÃO
-window.addEventListener("load", () => {
-  const texto = "Bem-vindo ao meu site!";
-  const elemento = document.getElementById("digitando");
-
-  let i = 0;
-
-  function digitar() {
-    if (i < texto.length) {
-      elemento.textContent += texto.charAt(i);
-      i++;
-      setTimeout(digitar, 120);
-    }
-  }
-
-  digitar();
-});
+window.onload = digitar;

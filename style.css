@@ -1,122 +1,80 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(180deg, #dcefff, #ffffff);
-  color: #000;
-  text-align: center;
-  min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: white;
+    font-family: Arial, sans-serif;
+
+    /* bordas azul claro ao redor do site */
+    border-left: 30px solid #a8d8ff;
+    border-right: 30px solid #a8d8ff;
 }
 
-/* HEADER */
-header {
-  background-color: #003366;
-  color: #fff;
-  padding: 20px;
-  font-size: 28px;
-  font-weight: bold;
-  position: relative;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+.container {
+    text-align: center;
+    padding: 20px;
 }
 
-.icons {
-  position: absolute;
-  top: 15px;
-  right: 20px;
+/* IMAGEM PRINCIPAL */
+.imagem-container {
+    position: relative;
+    display: inline-block;
 }
 
-.icons a img {
-  width: 35px;
-  margin: 0 8px;
-  transition: 0.3s;
+.imagem-principal {
+    width: 260px;
+    border-radius: 20px; /* retangular */
 }
 
-.icons a img:hover {
-  transform: scale(1.2);
-}
-
-/* FOTO PRINCIPAL */
-.foto img {
-  width: 420px;
-  height: 280px;
-  border-radius: 20px;
-  object-fit: cover;
-  margin: 40px auto 10px;
-  border: 5px solid #003366;
-  box-shadow: 0 0 20px rgba(0, 0, 0, .4);
-  transition: 0.5s;
-}
-
-.foto img:hover {
-  transform: scale(1.05) rotateY(5deg);
+/* TEXTO DIGITADO EM CIMA DA IMAGEM */
+.texto-sobre-imagem {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 3px 10px black;
+    width: 90%;
 }
 
 /* DATA DE NASCIMENTO */
-.nascimento {
-  font-size: 18px;
-  margin-top: 10px;
-  font-weight: bold;
-  color: #003366;
+.data-nascimento {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
 }
 
-/* TEXTO DIGITANDO */
-#digitando {
-  margin-top: 8px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #003366;
-  letter-spacing: 1px;
-  min-height: 28px;
+/* CARDS DAS OPÇÕES */
+.opcoes {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-/* TÍTULO */
-h2 {
-  font-size: 26px;
-  margin-top: 30px;
-  color: #00264d;
+.opcao {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
 }
 
-/* ITENS */
-.gostos {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin: 40px 0;
+.opcao img {
+    width: 130px;
+    height: 130px;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.item {
-  background-color: #e3f2fd;
-  border-radius: 20px;
-  padding: 15px;
-  width: 240px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, .15);
-  transition: 0.5s;
+/* EFEITO 3D NAS IMAGENS */
+.opcao:hover img {
+    transform: scale(1.15);
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
 }
 
-.item:hover {
-  transform: scale(1.07) rotateY(5deg);
-}
-
-.item img {
-  width: 100%;
-  height: 180px;
-  border-radius: 12px;
-  object-fit: cover;
-  transition: 0.5s;
-}
-
-.item img:hover {
-  transform: scale(1.08);
-}
-
-.item p {
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 10px;
-  color: #003366;
+.opcao p {
+    margin-top: 8px;
+    font-size: 18px;
+    color: #333;
 }
