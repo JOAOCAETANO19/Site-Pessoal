@@ -1,88 +1,74 @@
-body {
-    margin: 0;
-    background: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    border-left: 20px solid #4da3ff;
-    border-right: 20px solid #4da3ff;
+/* reset */
+*{box-sizing:border-box;margin:0;padding:0}
+
+/* page frame (fundo branco com bordas azul-claro) */
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background:#ffffff;
+  color:#111;
+  text-align:center;
+  min-height:100vh;
+  border-left:26px solid #cce8ff;
+  border-right:26px solid #cce8ff;
 }
 
-/* SOCIAL ICONS */
-header .social img {
-    width: 40px;
-    margin: 10px;
-    transition: transform 0.2s;
+/* header */
+header{position:relative;padding:18px 16px 6px; display:flex; justify-content:center; align-items:center}
+header .title{font-size:22px;font-weight:700;color:#003366}
+.icons{position:absolute; right:18px; top:10px}
+.icons img{width:36px;margin-left:10px;transition: transform .25s}
+.icons img:hover{transform:scale(1.12)}
+
+/* typing text (top) */
+.typing-target{
+  margin-top:10px;
+  font-size:34px;
+  font-weight:800;
+  color:#00264d;
+  min-height:44px; /* evita pular layout enquanto digita */
 }
 
-header .social img:hover {
-    transform: scale(1.15);
+/* hero (principal image) */
+.hero{margin-top:18px; display:flex; flex-direction:column; align-items:center; gap:10px}
+.principal-img{
+  width:220px; /* tamanho controlado */
+  height:160px;
+  object-fit:cover;
+  border-radius:16px;
+  border:5px solid #b7d9ff;
+  box-shadow:0 10px 22px rgba(0,0,0,0.12);
+  transition: transform .45s, box-shadow .45s;
+}
+.principal-img:hover{transform:scale(1.03);box-shadow:0 18px 36px rgba(0,0,0,0.18)}
+.nascimento{font-size:16px;color:#003366;font-weight:600}
+
+/* section title */
+.section-title{margin-top:26px;color:#003366;font-size:20px}
+
+/* gallery cards */
+.gallery{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;padding:20px}
+.card{width:150px;text-align:center}
+.card img{width:140px;height:100px;object-fit:cover;border-radius:12px;box-shadow:0 8px 18px rgba(0,0,0,0.12);transition: transform .3s, box-shadow .3s}
+.card img:hover{transform:scale(1.08);box-shadow:0 14px 28px rgba(0,0,0,0.18)}
+.card p{margin-top:8px;color:#003366;font-weight:700}
+
+/* fade-in base: elements start invisible and slightly down */
+.fade-item{
+  opacity:0;
+  transform:translateY(18px);
+  transition: opacity .6s ease-out, transform .6s ease-out;
 }
 
-/* FRASE DIGITANDO */
-#typing {
-    font-size: 32px;
-    font-weight: bold;
-    margin-top: 20px;
-    color: #333;
+/* when JS adds .ativo => visible */
+.fade-item.ativo{
+  opacity:1;
+  transform:translateY(0);
 }
 
-/* FOTO PRINCIPAL */
-.principal img {
-    width: 280px;
-    height: auto;
-    border-radius: 20px;
-    margin-top: 10px;
-    box-shadow: 0px 0px 10px #888;
-}
-
-.nascimento {
-    font-size: 18px;
-    color: #333;
-}
-
-/* OPÇÕES */
-.opcoes {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 40px;
-}
-
-.opcoes a {
-    margin: 20px;
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-}
-
-.foto {
-    width: 180px;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px #777;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Efeito 3D */
-.foto:hover {
-    transform: scale(1.12) rotateX(5deg) rotateY(5deg);
-    box-shadow: 0 20px 30px rgba(0,0,0,0.3);
-}
-
-/* Fade-in na abertura */
-.fade-in {
-    opacity: 0;
-    transform: translateY(15px);
-    animation: fadeInAnimation 1s ease-out forwards;
-}
-
-@keyframes fadeInAnimation {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* small screens */
+@media (max-width:700px){
+  .principal-img{width:86vw;height:auto}
+  .card{width:40vw}
+  .card img{width:100%;height:auto}
+  .typing-target{font-size:24px}
 }

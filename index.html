@@ -1,63 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Esse Sou Eu</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <header>
-        <div class="social">
-            <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
-                <img src="facebook.png" alt="Facebook">
-            </a>
-            <a href="https://www.instagram.com" target="_blank">
-                <img src="instagram.png" alt="Instagram">
-            </a>
-            <a href="https://www.whatsapp.com/?lang=pt" target="_blank">
-                <img src="whatsapp.png" alt="WhatsApp">
-            </a>
-        </div>
-    </header>
+  <header>
+    <div class="title">Esse Sou Eu</div>
+    <div class="icons">
+      <a href="https://www.facebook.com/?locale=pt_BR" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+      <a href="https://www.whatsapp.com/?lang=pt" target="_blank"><img src="whatsapp.png" alt="WhatsApp"></a>
+    </div>
+  </header>
 
-    <main>
+  <main>
+    <!-- Texto digitando no topo -->
+    <h1 id="digitar" class="typing-target"></h1>
 
-        <h1 id="typing"></h1>
+    <!-- Foto principal (fade-in) -->
+    <section class="hero fade-item">
+      <img src="principal.jpg" alt="Foto principal" class="principal-img">
+      <p class="nascimento">19/03/2009 — Minha data de nascimento</p>
+    </section>
 
-        <div class="principal fade-in">
-            <img src="principal.jpg" alt="Minha Foto">
-            <p class="nascimento">Nascimento: <strong>19/03/2009</strong></p>
-        </div>
+    <h2 class="section-title">Coisas Que Eu Gosto De Fazer</h2>
 
-        <div class="opcoes">
+    <!-- Galeria de cards (cada card tem .fade-item para aparecer suavemente) -->
+    <section class="gallery">
+      <div class="card fade-item">
+        <a href="https://pt.wikipedia.org/wiki/Est%C3%A1dio_Major_Ant%C3%B4nio_Couto_Pereira" target="_blank">
+          <img src="couto.jpg" alt="Couto Pereira">
+          <p>Couto Pereira</p>
+        </a>
+      </div>
 
-            <a href="https://pt.wikipedia.org/wiki/Estádio_Major_Antônio_Couto_Pereira" target="_blank">
-                <img src="coutop.png" class="foto fade-in" alt="Couto Pereira">
-                <p>Couto Pereira</p>
-            </a>
+      <div class="card fade-item">
+        <a href="https://open.spotify.com/intl-pt" target="_blank">
+          <img src="musica.jpg" alt="Músicas">
+          <p>Músicas</p>
+        </a>
+      </div>
 
-            <a href="https://open.spotify.com/intl-pt" target="_blank">
-                <img src="musicas.png" class="foto fade-in" alt="Músicas">
-                <p>Músicas</p>
-            </a>
+      <div class="card fade-item">
+        <a href="https://www.netflix.com/search?q=d" target="_blank">
+          <img src="filmes.jpg" alt="Filmes">
+          <p>Filmes</p>
+        </a>
+      </div>
 
-            <a href="https://www.netflix.com/search?q=d" target="_blank">
-                <img src="filmes.png" class="foto fade-in" alt="Filmes">
-                <p>Filmes</p>
-            </a>
+      <div class="card fade-item">
+        <a href="https://playvalorant.com/pt-br" target="_blank">
+          <img src="jogar.jpg" alt="Jogar">
+          <p>Jogar</p>
+        </a>
+      </div>
+    </section>
+  </main>
 
-            <a href="https://playvalorant.com/pt-br" target="_blank">
-                <img src="jogar.png" class="foto fade-in" alt="Jogar">
-                <p>Jogar</p>
-            </a>
-
-        </div>
-
-    </main>
-
-    <script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
