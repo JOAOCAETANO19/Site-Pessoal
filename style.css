@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* FUNDO BRANCO + BORDAS AZUL ESCURO */
+/* FUNDO */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: white;
@@ -26,6 +26,13 @@ header {
   position: relative;
 }
 
+/* SUBTÍTULO */
+#subtitulo {
+  font-size: 16px;
+  margin-top: 5px;
+  opacity: 0.8;
+}
+
 /* ÍCONES */
 .icons {
   position: absolute;
@@ -43,27 +50,21 @@ header {
   transform: scale(1.2);
 }
 
-/* MÁQUINA DE ESCREVER (TÍTULO, SUBTÍTULO E SEÇÃO) */
-#typewriter, #subTypewriter, #typewriterSection {
+/* MÁQUINA DE ESCREVER */
+#typewriter {
+  font-size: 32px;
+  margin: 20px 0;
   color: #003366;
   font-weight: bold;
   border-right: 3px solid #003366;
   width: fit-content;
-  margin: 20px auto;
+  margin-left: auto;
+  margin-right: auto;
   white-space: nowrap;
   overflow: hidden;
 }
 
-/* tamanhos diferentes */
-#typewriter { font-size: 32px; }
-#subTypewriter { font-size: 20px; margin-top: -10px; }
-#typewriterSection { font-size: 26px; margin-top: 18px; }
-
-/* FOTO PRINCIPAL */
-.foto {
-  perspective: 900px;
-}
-
+/* FOTO */
 .foto img {
   width: 420px;
   height: 280px;
@@ -72,20 +73,24 @@ header {
   margin: 30px auto;
   border: 5px solid #003366;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  transition: transform 0.45s ease, box-shadow 0.45s ease;
-  transform-style: preserve-3d;
 }
 
-.foto:hover img {
-  transform: scale(1.08) rotateY(8deg) translateZ(18px);
-  box-shadow: 0 30px 45px rgba(0, 0, 0, 0.45);
-}
-
-/* DATA DE NASCIMENTO */
 .nascimento {
   font-size: 20px;
   margin-top: -15px;
   color: #003366;
+}
+
+/* TÍTULOS */
+h2 {
+  font-size: 26px;
+  color: #003366;
+  margin-top: 20px;
+}
+
+/* ESPAÇO EXTRA ANTES DAS IMAGENS */
+.favorites-section {
+  margin-top: 180px;
 }
 
 /* ITENS */
@@ -103,26 +108,27 @@ header {
   border-radius: 20px;
   width: 240px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-  transition: transform 0.45s ease, box-shadow 0.45s ease;
-  perspective: 900px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+  perspective: 800px;
 }
 
 .item:hover {
-  transform: scale(1.07) rotateY(6deg);
-  box-shadow: 0 20px 30px rgba(0, 51, 102, 0.35);
+  transform: scale(1.05) rotateX(10deg) rotateY(-10deg);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25);
 }
 
+/* IMAGENS 3D */
 .item img {
   width: 100%;
   height: 180px;
   border-radius: 12px;
   object-fit: cover;
-  transition: transform 0.45s ease, box-shadow 0.45s ease;
+  transition: transform 0.4s ease;
 }
 
-.item img:hover {
-  transform: scale(1.08) rotateY(6deg);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+.item:hover img {
+  transform: translateZ(18px);
 }
 
 .item p {
@@ -131,7 +137,7 @@ header {
   color: #003366;
 }
 
-/* ANIMAÇÃO DE APARIÇÃO */
+/* FADE-IN */
 .fade-item {
   opacity: 0;
   transform: translateY(30px);

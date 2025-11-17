@@ -1,74 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Esse Sou Eu</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-  <header>
-    Esse Sou Eu
-    <div class="icons">
-      <a href="https://www.whatsapp.com/?lang=pt" target="_blank">
-        <img src="whatsapp.png" alt="WhatsApp">
-      </a>
-      <a href="https://www.instagram.com" target="_blank">
-        <img src="instagram.png" alt="Instagram">
-      </a>
-      <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
-        <img src="facebook.png" alt="Facebook">
-      </a>
-    </div>
-  </header>
+    <header>
+        Bem-vindo ao meu site
 
-  <!-- FRASE PRINCIPAL -->
-  <h1 id="typewriter" class="fade-item"></h1>
+        <div id="subtitulo">João Caetano</div>
 
-  <!-- NOME PEQUENO COM MÁQUINA DE ESCREVER -->
-  <h3 id="subTypewriter" class="fade-item"></h3>
+        <div class="icons">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"></a>
+        </div>
+    </header>
 
-  <div class="foto fade-item">
-    <img src="principal.jpg" alt="Foto pessoal">
-    <p class="nascimento">Nascimento: <b>19/03/2009</b></p>
-  </div>
+    <div id="typewriter"></div>
 
-  <!-- AGORA O TÍTULO DA SEÇÃO COM MÁQUINA DE ESCREVER -->
-  <h2 id="typewriterSection" class="fade-item"></h2>
-
-  <div class="gostos">
-
-    <div class="item fade-item">
-      <a href="https://www.netflix.com/search?q=d" target="_blank">
-        <img src="filmes.jpg" alt="Assistir Filmes">
-      </a>
-      <p>Assistir Filmes</p>
+    <div class="foto">
+        <img src="https://via.placeholder.com/420x280" alt="Minha foto">
     </div>
 
-    <div class="item fade-item">
-      <a href="https://pt.wikipedia.org/wiki/Est%C3%A1dio_Major_Ant%C3%B4nio_Couto_Pereira" target="_blank">
-        <img src="couto.jpg" alt="Ir ao Couto Pereira">
-      </a>
-      <p>Ir ao Couto Pereira</p>
-    </div>
+    <p class="nascimento">Nascido em 2007</p>
 
-    <div class="item fade-item">
-      <a href="https://open.spotify.com/intl-pt" target="_blank">
-        <img src="musica.jpg" alt="Escutar Músicas">
-      </a>
-      <p>Escutar Músicas</p>
-    </div>
+    <h2>As coisas que eu gosto</h2>
 
-    <div class="item fade-item">
-      <a href="https://playvalorant.com/pt-br" target="_blank">
-        <img src="jogar.jpg" alt="Jogar">
-      </a>
-      <p>Jogar</p>
-    </div>
+    <section class="favorites-section">
+        <div class="gostos">
 
-  </div>
+            <div class="item fade-item">
+                <img src="https://via.placeholder.com/300x180" alt="">
+                <p>Programação</p>
+            </div>
 
-  <script src="script.js"></script>
+            <div class="item fade-item">
+                <img src="https://via.placeholder.com/300x180" alt="">
+                <p>Jogos</p>
+            </div>
+
+            <div class="item fade-item">
+                <img src="https://via.placeholder.com/300x180" alt="">
+                <p>Música</p>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
