@@ -43,8 +43,8 @@ header {
   transform: scale(1.2);
 }
 
-/* MÁQUINA DE ESCREVER */
-#typewriter, #subTypewriter {
+/* MÁQUINA DE ESCREVER (TÍTULO, SUBTÍTULO E SEÇÃO) */
+#typewriter, #subTypewriter, #typewriterSection {
   color: #003366;
   font-weight: bold;
   border-right: 3px solid #003366;
@@ -54,14 +54,10 @@ header {
   overflow: hidden;
 }
 
-#typewriter {
-  font-size: 32px;
-}
-
-#subTypewriter {
-  font-size: 20px;
-  margin-top: -10px;
-}
+/* tamanhos diferentes */
+#typewriter { font-size: 32px; }
+#subTypewriter { font-size: 20px; margin-top: -10px; }
+#typewriterSection { font-size: 26px; margin-top: 18px; }
 
 /* FOTO PRINCIPAL */
 .foto {
@@ -90,13 +86,6 @@ header {
   font-size: 20px;
   margin-top: -15px;
   color: #003366;
-}
-
-/* TÍTULO */
-h2 {
-  font-size: 26px;
-  color: #003366;
-  margin-top: 20px;
 }
 
 /* ITENS */
