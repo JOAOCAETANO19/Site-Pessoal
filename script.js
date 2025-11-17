@@ -3,10 +3,10 @@ function revelarAoRolar() {
   const elementos = document.querySelectorAll('.foto, .item');
 
   elementos.forEach((el, index) => {
-    const posicao = el.getBoundingClientRect().top;
-    const alturaJanela = window.innerHeight - 100;
+    const pos = el.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight - 100;
 
-    if (posicao < alturaJanela) {
+    if (pos < windowHeight) {
       setTimeout(() => {
         el.classList.add('ativo');
       }, index * 150);
@@ -17,17 +17,20 @@ function revelarAoRolar() {
 window.addEventListener('scroll', revelarAoRolar);
 window.addEventListener('load', revelarAoRolar);
 
-
 // EFEITO DE DIGITAÇÃO
-const texto = "Pode ser";
-let i = 0;
+window.addEventListener("load", () => {
+  const texto = "Bem-vindo ao meu site!";
+  const elemento = document.getElementById("digitando");
 
-function digitar() {
-  if (i < texto.length) {
-    document.getElementById("digitando").textContent += texto.charAt(i);
-    i++;
-    setTimeout(digitar, 120);
+  let i = 0;
+
+  function digitar() {
+    if (i < texto.length) {
+      elemento.textContent += texto.charAt(i);
+      i++;
+      setTimeout(digitar, 120);
+    }
   }
-}
 
-window.addEventListener("load", digitar);
+  digitar();
+});
