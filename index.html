@@ -1,84 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Esse Sou Eu</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Site Pessoal</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <header>
-    <div class="title">Esse Sou Eu</div>
+<header>
+    <h1 class="main-title">Bem-vindo ao meu site</h1>
+    <h2 class="name-subtitle">João Cleberson Caetano</h2>
+</header>
 
-    <div class="icons">
-      <a href="https://www.whatsapp.com/?lang=pt" target="_blank"><img src="whatsapp.png"></a>
-      <a href="https://www.instagram.com" target="_blank"><img src="instagram.png"></a>
-      <a href="https://www.facebook.com/?locale=pt_BR" target="_blank"><img src="facebook.png"></a>
-    </div>
-  </header>
+<section class="sobre fade-section">
+    <h2 class="sobre-title">
+        Esse sou eu <span class="highlight"></span>
+    </h2>
 
-  <!-- Máquina de escrever -->
-  <h1 id="typewriter" class="fade-item"></h1>
-  <h3 id="subTypewriter" class="fade-item"></h3>
-
-  <!-- SOBRE MIM (fade-in suave) -->
-  <section class="sobre fade-section">
-    <h2 class="sobre-titulo">Sobre Mim</h2>
-
-    <p class="sobre-texto">
-      Meu nome é <strong>João Cleberson Caetano</strong>, tenho <strong>16 anos</strong>,
-      estou fazendo o <strong>segundo ano do Ensino Médio de Desenvolvimento de Sistemas</strong>
-      no Szymanski. Sonho em ter muito dinheiro e saúde, e ter minha própria família.
+    <p class="sobre-text">
+        Meu nome é <strong>João Cleberson Caetano</strong>, tenho <strong>16 anos</strong>,
+        estou fazendo o <strong>segundo ano do Ensino Médio de Desenvolvimento de Sistemas</strong>
+        no Szymanski. Sonho em ter muito dinheiro e saúde, e ter minha própria família.
     </p>
-  </section>
+</section>
 
-  <!-- FOTO PRINCIPAL -->
-  <section class="hero fade-item">
-    <div class="foto">
-      <img src="principal.jpg" alt="Foto pessoal">
+<section class="coisas">
+    <h2 class="coisas-title">Coisas que eu gosto</h2>
+
+    <p class="typewriter" id="typewriter"></p>
+
+    <div class="imagens-container">
+        <div class="img-card"><img src="img1.jpg" alt="Imagem 1"></div>
+        <div class="img-card"><img src="img2.jpg" alt="Imagem 2"></div>
+        <div class="img-card"><img src="img3.jpg" alt="Imagem 3"></div>
     </div>
-    <p class="nascimento">19/03/2009 — Minha data de nascimento</p>
-  </section>
+</section>
 
-  <!-- Coisas que eu gosto - máquina de escrever 2 -->
-  <h2 id="typewriterSection" class="fade-item"></h2>
-
-  <section class="favorites-section">
-    <div class="gostos">
-
-      <div class="item fade-item">
-        <a href="https://www.netflix.com" target="_blank">
-          <img src="filmes.jpg" alt="Assistir Filmes">
-          <p>Assistir Filmes</p>
-        </a>
-      </div>
-
-      <div class="item fade-item">
-        <a href="https://pt.wikipedia.org/wiki/Est%C3%A1dio_Major_Ant%C3%B4nio_Couto_Pereira" target="_blank">
-          <img src="couto.jpg" alt="Ir ao Couto Pereira">
-          <p>Ir ao Couto Pereira</p>
-        </a>
-      </div>
-
-      <div class="item fade-item">
-        <a href="https://open.spotify.com" target="_blank">
-          <img src="musica.jpg" alt="Escutar Músicas">
-          <p>Escutar Músicas</p>
-        </a>
-      </div>
-
-      <div class="item fade-item">
-        <a href="https://playvalorant.com/pt-br" target="_blank">
-          <img src="jogar.jpg" alt="Jogar">
-          <p>Jogar</p>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

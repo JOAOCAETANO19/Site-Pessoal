@@ -1,92 +1,65 @@
 /* RESET */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* FUNDO + BORDAS */
+/* FUNDO */
 body {
   font-family: Arial, sans-serif;
   background: white;
   color: #000;
   text-align: center;
-  border-left: 45px solid #003366;
-  border-right: 45px solid #003366;
 }
 
-/* HEADER */
+/* CABEÇALHO */
 header {
-  background: #003366;
+  background-color: #003366;
   color: white;
-  padding: 35px;
+  padding: 45px;
   font-size: 40px;
   font-weight: bold;
-  position: relative;
 }
 
-.title { font-size: 40px; }
-
-/* ÍCONES */
-.icons {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-}
-
-.icons img {
-  width: 40px;
-  margin: 0 8px;
-  transition: 0.3s;
-}
-
-.icons img:hover { transform: scale(1.2); }
-
-/* MÁQUINA DE ESCREVER */
-#typewriter {
-  font-size: 32px;
-  margin-top: 25px;
-  color: #003366;
-  font-weight: bold;
-  border-right: 3px solid #003366;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-#subTypewriter {
-  font-size: 20px;
-  color: #003366;
-  opacity: 0.85;
-  border-right: 2px solid #003366;
-  width: fit-content;
-  margin: 8px auto 0 auto;
-  white-space: nowrap;
-  overflow: hidden;
+.name-subtitle {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #cfe3ff;
 }
 
 /* SOBRE MIM */
 .sobre {
-  margin-top: 50px;
-  padding: 20px;
+  padding: 60px 20px;
 }
 
-.sobre-titulo {
-  font-size: 32px;
-  color: #003366;
-  margin-bottom: 15px;
+.sobre-title {
+  font-size: 35px;
+  font-weight: bold;
 }
 
-.sobre-texto {
+.highlight {
+  display: inline-block;
+  width: 60px;
+  height: 8px;
+  background: #003366;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.sobre-text {
   max-width: 750px;
-  margin: auto;
+  margin: 25px auto 0;
   font-size: 20px;
+  line-height: 1.6;
   color: #003366;
 }
 
-/* Fade-in suave */
+/* FADE-IN */
 .fade-section {
   opacity: 0;
-  transform: translateY(40px);
-  transition: 0.9s ease;
+  transform: translateY(30px);
+  transition: 0.8s ease;
 }
 
 .fade-section.show {
@@ -94,72 +67,54 @@ header {
   transform: translateY(0);
 }
 
-/* FOTO PRINCIPAL */
-.foto img {
-  width: 420px;
-  height: 280px;
-  border-radius: 20px;
-  border: 5px solid #003366;
-  object-fit: cover;
-  margin: 30px auto;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
-  transition: 0.45s;
+/* COISAS QUE EU GOSTO */
+.coisas {
+  margin-top: 120px;     /* 🔥 MAIS PARA BAIXO */
 }
 
-.foto img:hover {
-  transform: scale(1.1) rotateY(8deg);
-  box-shadow: 0 30px 45px rgba(0,0,0,0.45);
+.coisas-title {
+  font-size: 30px;
+  color: #003366;
+  margin-bottom: 20px;
 }
 
-/* Itens */
-.gostos {
+/* Máquina de escrever */
+.typewriter {
+  font-size: 24px;
+  font-weight: bold;
+  height: 30px;
+  color: #003366;
+  margin-bottom: 50px; /* 🔥 MAIS ESPAÇAMENTO */
+}
+
+/* IMAGENS */
+.imagens-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 30px;
   margin-top: 40px;
 }
 
-.item {
-  background: #e3f2fd;
-  padding: 15px;
-  width: 260px;
-  border-radius: 18px;
-  transition: 0.45s;
-  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+.img-card {
+  width: 280px;        /* 🔥 MAIS LARGAS */
+  height: 280px;       /* 🔥 MAIS ALTAS */
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.3s;
 }
 
-/* Imagens maiores */
-.item img {
+.img-card img {
   width: 100%;
-  height: 220px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 12px;
   transition: 0.4s;
 }
 
-.item:hover {
-  transform: scale(1.07) rotateY(6deg);
+/* Efeito 3D */
+.img-card:hover {
+  transform: scale(1.08) rotateX(10deg) rotateY(-10deg);
 }
 
-.item img:hover {
-  transform: scale(1.1);
-}
-
-.item p {
-  margin-top: 10px;
-  font-size: 18px;
-  color: #003366;
-}
-
-/* Fade individual dos cards */
-.fade-item {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 0.8s ease;
-}
-
-.fade-item.ativo {
-  opacity: 1;
-  transform: translateY(0);
+.img-card:hover img {
+  transform: scale(1.12);
 }

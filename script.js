@@ -1,63 +1,48 @@
-// TEXTOS
-const mainText = "Bem-vindo ao meu site!";
-const nameText = "por João Cleberson Caetano";
-const sectionText = "Coisas Que Eu Gosto De Fazer";
+// MÁQUINA DE ESCREVER
+const frases = [
+    "Ir ao Couto Pereira",
+    "Escutar músicas",
+    "Assistir filmes",
+    "Programar",
+];
 
-// Função máquina de escrever
-function typeText(text, id, speed = 70) {
-  return new Promise(resolve => {
-    const el = document.getElementById(id);
-    el.textContent = "";
-    let i = 0;
+let i = 0;
+let j = 0;
+let apagando = false;
+const elemento = document.getElementById("typewriter");
 
-    function step() {
-      el.textContent = text.slice(0, i);
-      i++;
-      if (i <= text.length) {
-        setTimeout(step, speed);
-      } else {
-        resolve();
-      }
+function typeWriter() {
+    let texto = frases[i];
+
+    if (!apagando) {
+        elemento.textContent = texto.substring(0, j++);
+    } else {
+        elemento.textContent = texto.substring(0, j--);
     }
-    step();
-  });
+
+    if (j === texto.length) {
+        apagando = true;
+        setTimeout(typeWriter, 1200);
+        return;
+    }
+
+    if (apagando && j === 0) {
+        apagando = false;
+        i = (i + 1) % frases.length;
+    }
+
+    setTimeout(typeWriter, 120);
 }
 
-// Executa na ordem
-window.addEventListener("DOMContentLoaded", async () => {
-  await typeText(mainText, "typewriter", 65);
-  await new Promise(r => setTimeout(r, 200));
-  await typeText(nameText, "subTypewriter", 60);
-  await new Promise(r => setTimeout(r, 250));
-  await typeText(sectionText, "typewriterSection", 75);
-});
+typeWriter();
 
-// Fade-in dos itens
-(function () {
-  const itens = document.querySelectorAll(".fade-item");
 
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("ativo");
-        obs.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
-
-  itens.forEach(i => obs.observe(i));
-})();
-
-// Fade-in da seção SOBRE MIM
+// FADE-IN PARA O SOBRE MIM
 const fadeSection = document.querySelector(".fade-section");
 
 function checkFade() {
-  const pos = fadeSection.getBoundingClientRect().top;
-  const screen = window.innerHeight;
-
-  if (pos < screen - 60) {
-    fadeSection.classList.add("show");
-  }
+    const pos = fadeSection.getBoundingClientRect().top;
+    if (pos < window.innerHeight - 80) fadeSection.classList.add("show");
 }
 
 window.addEventListener("scroll", checkFade);
