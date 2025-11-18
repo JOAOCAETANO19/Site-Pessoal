@@ -1,24 +1,19 @@
 /* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* FUNDO BRANCO + BORDAS AZUL ESCURO */
+/* FUNDO + BORDAS */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
   background: white;
   color: #000;
   text-align: center;
-  min-height: 100vh;
   border-left: 45px solid #003366;
   border-right: 45px solid #003366;
 }
 
-/* TOPO */
+/* HEADER */
 header {
-  background-color: #003366;
+  background: #003366;
   color: white;
   padding: 35px;
   font-size: 40px;
@@ -26,152 +21,142 @@ header {
   position: relative;
 }
 
+.title { font-size: 40px; }
+
+/* ÍCONES */
 .icons {
   position: absolute;
-  top: 22px;
+  top: 20px;
   right: 25px;
 }
 
-.icons a img {
+.icons img {
   width: 40px;
   margin: 0 8px;
-  transition: transform 0.3s ease;
+  transition: 0.3s;
 }
 
-.icons a img:hover {
-  transform: scale(1.2);
-}
+.icons img:hover { transform: scale(1.2); }
 
 /* MÁQUINA DE ESCREVER */
-#typewriter,
-#subTypewriter,
-#typewriterSection {
+#typewriter {
+  font-size: 32px;
+  margin-top: 25px;
+  color: #003366;
+  font-weight: bold;
+  border-right: 3px solid #003366;
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
-  white-space: nowrap;
   overflow: hidden;
-  color: #003366;
-}
-
-#typewriter {
-  font-size: 32px;
-  font-weight: bold;
-  border-right: 3px solid #003366;
-  margin-top: 25px;
+  white-space: nowrap;
 }
 
 #subTypewriter {
   font-size: 20px;
-  margin-top: 6px;
-  border-right: 2px solid #003366;
-  opacity: 0.85;
-}
-
-#typewriterSection {
-  font-size: 26px;
-  border-right: 3px solid #003366;
-  margin-top: 60px;
-}
-
-/* FOTO PRINCIPAL */
-.foto {
-  perspective: 900px;
-}
-
-.foto img {
-  width: 420px;
-  height: 280px;
-  border-radius: 20px;
-  object-fit: cover;
-  margin: 30px auto;
-  border: 5px solid #003366;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  transition: transform 0.45s ease, box-shadow 0.45s ease;
-  transform-style: preserve-3d;
-}
-
-.foto:hover img {
-  transform: scale(1.08) rotateY(8deg) translateZ(18px);
-  box-shadow: 0 30px 45px rgba(0, 0, 0, 0.45);
-}
-
-.nascimento {
-  font-size: 20px;
   color: #003366;
-  margin-top: -10px;
+  opacity: 0.85;
+  border-right: 2px solid #003366;
+  width: fit-content;
+  margin: 8px auto 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 /* SOBRE MIM */
 .sobre {
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.sobre-titulo {
+  font-size: 32px;
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+.sobre-texto {
   max-width: 750px;
-  margin: 40px auto 0;
-  padding: 20px 25px;
-  background: #e3f2fd;
-  border-radius: 18px;
-  box-shadow: 0 0 18px rgba(0, 0, 0, 0.15);
-}
-
-.sobre h2 {
-  font-size: 28px;
+  margin: auto;
+  font-size: 20px;
   color: #003366;
-  margin-bottom: 12px;
 }
 
-.bio-texto {
-  font-size: 19px;
-  color: #003366;
-  line-height: 1.6;
+/* Fade-in suave */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.9s ease;
 }
 
-/* ITENS */
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* FOTO PRINCIPAL */
+.foto img {
+  width: 420px;
+  height: 280px;
+  border-radius: 20px;
+  border: 5px solid #003366;
+  object-fit: cover;
+  margin: 30px auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  transition: 0.45s;
+}
+
+.foto img:hover {
+  transform: scale(1.1) rotateY(8deg);
+  box-shadow: 0 30px 45px rgba(0,0,0,0.45);
+}
+
+/* Itens */
 .gostos {
   display: flex;
   justify-content: center;
-  gap: 30px;
   flex-wrap: wrap;
+  gap: 30px;
   margin-top: 40px;
 }
 
 .item {
   background: #e3f2fd;
   padding: 15px;
-  border-radius: 20px;
   width: 260px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-  transition: transform 0.45s ease, box-shadow 0.45s ease;
-  perspective: 900px;
+  border-radius: 18px;
+  transition: 0.45s;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+
+/* Imagens maiores */
+.item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.4s;
 }
 
 .item:hover {
   transform: scale(1.07) rotateY(6deg);
-  box-shadow: 0 20px 30px rgba(0, 51, 102, 0.35);
-}
-
-.item img {
-  width: 100%;
-  height: 200px;
-  border-radius: 12px;
-  object-fit: cover;
-  transition: transform 0.45s ease, box-shadow 0.45s ease;
 }
 
 .item img:hover {
-  transform: scale(1.08) rotateY(6deg);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
 }
 
 .item p {
-  font-weight: bold;
   margin-top: 10px;
+  font-size: 18px;
   color: #003366;
 }
 
-/* FADE-IN */
+/* Fade individual dos cards */
 .fade-item {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition: 0.8s ease;
 }
 
 .fade-item.ativo {
