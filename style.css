@@ -1,121 +1,181 @@
-/* ===========================
-   CONFIGURAÇÕES GERAIS
-=========================== */
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* FUNDO + BORDAS */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #000;
-    scroll-behavior: smooth;
+  font-family: Arial, sans-serif;
+  background: white;
+  color: #000;
+  text-align: center;
+  border-left: 45px solid #003366;
+  border-right: 45px solid #003366;
 }
 
-/* ===========================
-   TÍTULO "ESSE SOU EU"
-=========================== */
-.header-title {
-    text-align: center;
-    font-size: 65px; /* maior como pedido */
-    font-weight: bold;
-    margin-top: 40px;
-    padding: 15px 25px;
-    display: inline-block;
-    border: 6px solid #007bff; /* borda azul maior */
-    border-radius: 18px;
+/* HEADER */
+header {
+  background: #003366;
+  color: white;
+  padding: 35px;
+  font-size: 40px;
+  font-weight: bold;
+  position: relative;
 }
 
-/* Centralizar o título */
-.header-container {
-    text-align: center;
+.title { font-size: 40px; }
+
+/* ÍCONES */
+.icons {
+  position: absolute;
+  top: 20px;
+  right: 25px;
 }
 
-/* ===========================
-   FOTO PRINCIPAL
-=========================== */
-.profile-image {
-    width: 260px;
-    height: 260px;
-    border-radius: 50%;
-    display: block;
-    margin: 20px auto 40px auto;
-    object-fit: cover;
+.icons img {
+  width: 40px;
+  margin: 0 8px;
+  transition: 0.3s;
 }
 
-/* ===========================
-   SEÇÃO SOBRE MIM + ANIMAÇÃO
-=========================== */
-.sobre-container {
-    width: 80%;
-    max-width: 850px;
-    margin: 60px auto;
-    padding: 20px;
-    background: #f4f4f4;
-    border-radius: 18px;
-    opacity: 0;
-    animation: fadeIn 1.3s ease-in-out forwards;
+.icons img:hover { transform: scale(1.2); }
+
+/* MÁQUINA DE ESCREVER */
+#typewriter {
+  font-size: 32px;
+  margin-top: 25px;
+  color: #003366;
+  font-weight: bold;
+  border-right: 3px solid #003366;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-.sobre-title {
-    font-size: 32px;
-    margin-bottom: 15px;
-    font-weight: bold;
+#subTypewriter {
+  font-size: 20px;
+  color: #003366;
+  opacity: 0.85;
+  border-right: 2px solid #003366;
+  width: fit-content;
+  margin: 8px auto 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-.sobre-text {
-    font-size: 20px;
-    line-height: 1.6;
+/* SOBRE MIM */
+.sobre {
+  margin-top: 50px;
+  padding: 20px;
 }
 
-/* Animação fade-in */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.sobre-titulo {
+  font-size: 32px;
+  color: #003366;
+  margin-bottom: 15px;
 }
 
-/* ===========================
-   FRASE "COISAS QUE EU GOSTO"
-=========================== */
-.gosto-title {
-    margin-top: 180px; /* Descer mais como você pediu */
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
+.sobre-texto {
+  max-width: 750px;
+  margin: auto;
+  font-size: 20px;
+  color: #003366;
 }
 
-/* ===========================
-   IMAGENS DAS COISAS QUE GOSTO
-=========================== */
-.gosto-container {
-    margin-top: 35px; /* espaço entre o título e as imagens */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    flex-wrap: wrap;
+/* Fade-in suave */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.9s ease;
 }
 
-/* TAMANHO MAIOR DAS IMAGENS (pedido recente) */
-.gosto-item img {
-    width: 230px;
-    height: 230px;
-    border-radius: 16px;
-    object-fit: cover;
-    transition: transform 0.3s;
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.gosto-item img:hover {
-    transform: scale(1.06);
+/* FOTO PRINCIPAL */
+.foto img {
+  width: 420px;
+  height: 280px;
+  border-radius: 20px;
+  border: 5px solid #003366;
+  object-fit: cover;
+  margin: 30px auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  transition: 0.45s;
 }
 
-/* Legenda das imagens */
-.gosto-item p {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 20px;
+.foto img:hover {
+  transform: scale(1.1) rotateY(8deg);
+  box-shadow: 0 30px 45px rgba(0,0,0,0.45);
+}
+
+/* ============================= */
+/* AQUI ESTÃO AS ALTERAÇÕES QUE VOCÊ PEDIU */
+/* ============================= */
+
+/* Frase "Coisas que eu gosto de fazer" mais para baixo */
+#typewriterSection {
+  margin-top: 80px !important;
+}
+
+/* Imagens mais para baixo */
+.favorites-section {
+  margin-top: 60px;
+}
+
+/* ============================= */
+
+/* Itens */
+.gostos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.item {
+  background: #e3f2fd;
+  padding: 15px;
+  width: 260px;
+  border-radius: 18px;
+  transition: 0.45s;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+
+/* Imagens maiores */
+.item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.4s;
+}
+
+.item:hover {
+  transform: scale(1.07) rotateY(6deg);
+}
+
+.item img:hover {
+  transform: scale(1.1);
+}
+
+.item p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #003366;
+}
+
+/* Fade individual dos cards */
+.fade-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s ease;
+}
+
+.fade-item.ativo {
+  opacity: 1;
+  transform: translateY(0);
 }

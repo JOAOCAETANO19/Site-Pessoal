@@ -1,9 +1,9 @@
-// TEXTOS
+// TEXTOS DAS MÁQUINAS DE ESCREVER
 const mainText = "Bem-vindo ao meu site!";
 const nameText = "por João Cleberson Caetano";
 const sectionText = "Coisas Que Eu Gosto De Fazer";
 
-// Função máquina de escrever
+// Função de máquina de escrever
 function typeText(text, id, speed = 70) {
   return new Promise(resolve => {
     const el = document.getElementById(id);
@@ -23,7 +23,7 @@ function typeText(text, id, speed = 70) {
   });
 }
 
-// Executa na ordem
+// Ordem da animação dos textos
 window.addEventListener("DOMContentLoaded", async () => {
   await typeText(mainText, "typewriter", 65);
   await new Promise(r => setTimeout(r, 200));
@@ -32,7 +32,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   await typeText(sectionText, "typewriterSection", 75);
 });
 
-// Fade-in dos itens
+// Fade-in dos cards (itens)
 (function () {
   const itens = document.querySelectorAll(".fade-item");
 
