@@ -68,8 +68,9 @@ header {
 }
 
 /* COISAS QUE EU GOSTO */
+/* <-- apenas aqui ajustei para empurrar a seção para baixo --> */
 .coisas {
-  margin-top: 120px;     /* 🔥 MAIS PARA BAIXO */
+  margin-top: 120px;     /* <<-- alterado: move a frase + imagens mais para baixo */
 }
 
 .coisas-title {
@@ -79,12 +80,14 @@ header {
 }
 
 /* Máquina de escrever */
+/* <-- ajuste pequeno para separar a frase do título da seção --> */
 .typewriter {
   font-size: 24px;
   font-weight: bold;
   height: 30px;
   color: #003366;
-  margin-bottom: 50px; /* 🔥 MAIS ESPAÇAMENTO */
+  margin-top: 30px; /* <<-- alterado: espaço acima da frase */
+  margin-bottom: 50px;
 }
 
 /* IMAGENS */
@@ -96,8 +99,8 @@ header {
 }
 
 .img-card {
-  width: 280px;        /* 🔥 MAIS LARGAS */
-  height: 280px;       /* 🔥 MAIS ALTAS */
+  width: 280px;
+  height: 280px;
   border-radius: 20px;
   overflow: hidden;
   transition: 0.3s;
