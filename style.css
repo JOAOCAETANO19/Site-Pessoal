@@ -12,21 +12,20 @@ body {
   color: #000;
   text-align: center;
   min-height: 100vh;
-  border-left: 45px solid #003366;   /* BORDAS MAIS GROSSAS */
-  border-right: 45px solid #003366;  /* BORDAS MAIS GROSSAS */
+  border-left: 45px solid #003366;
+  border-right: 45px solid #003366;
 }
 
-/* TOPO - AZUL ESCURO */
+/* TOPO */
 header {
   background-color: #003366;
   color: white;
-  padding: 35px;               /* ALTURA MAIOR */
-  font-size: 40px;             /* TEXTO MAIOR */
+  padding: 35px;
+  font-size: 40px;
   font-weight: bold;
   position: relative;
 }
 
-/* ÍCONES */
 .icons {
   position: absolute;
   top: 22px;
@@ -34,7 +33,7 @@ header {
 }
 
 .icons a img {
-  width: 40px; 
+  width: 40px;
   margin: 0 8px;
   transition: transform 0.3s ease;
 }
@@ -44,31 +43,35 @@ header {
 }
 
 /* MÁQUINA DE ESCREVER */
-#typewriter {
-  font-size: 32px;
-  margin: 25px 0 10px 0;
-  color: #003366;
-  font-weight: bold;
-  border-right: 3px solid #003366;
+#typewriter,
+#subTypewriter,
+#typewriterSection {
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
   white-space: nowrap;
   overflow: hidden;
+  color: #003366;
 }
 
-/* SUBTÍTULO COM MÁQUINA DE ESCREVER */
+#typewriter {
+  font-size: 32px;
+  font-weight: bold;
+  border-right: 3px solid #003366;
+  margin-top: 25px;
+}
+
 #subTypewriter {
   font-size: 20px;
   margin-top: 6px;
-  color: #003366;
-  opacity: 0.85;
   border-right: 2px solid #003366;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  white-space: nowrap;
-  overflow: hidden;
+  opacity: 0.85;
+}
+
+#typewriterSection {
+  font-size: 26px;
+  border-right: 3px solid #003366;
+  margin-top: 60px;
 }
 
 /* FOTO PRINCIPAL */
@@ -93,18 +96,32 @@ header {
   box-shadow: 0 30px 45px rgba(0, 0, 0, 0.45);
 }
 
-/* DATA DE NASCIMENTO */
 .nascimento {
   font-size: 20px;
-  margin-top: -15px;
   color: #003366;
+  margin-top: -10px;
 }
 
-/* TÍTULOS */
-h2 {
-  font-size: 26px;
+/* SOBRE MIM */
+.sobre {
+  max-width: 750px;
+  margin: 40px auto 0;
+  padding: 20px 25px;
+  background: #e3f2fd;
+  border-radius: 18px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.15);
+}
+
+.sobre h2 {
+  font-size: 28px;
   color: #003366;
-  margin-top: 60px;
+  margin-bottom: 12px;
+}
+
+.bio-texto {
+  font-size: 19px;
+  color: #003366;
+  line-height: 1.6;
 }
 
 /* ITENS */
@@ -113,14 +130,14 @@ h2 {
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
-  margin: 40px 0;
+  margin-top: 40px;
 }
 
 .item {
   background: #e3f2fd;
   padding: 15px;
   border-radius: 20px;
-  width: 260px;                 /* AUMENTADO PARA CABER IMAGEM MAIOR */
+  width: 260px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
   transition: transform 0.45s ease, box-shadow 0.45s ease;
   perspective: 900px;
@@ -133,7 +150,7 @@ h2 {
 
 .item img {
   width: 100%;
-  height: 220px;                /* 🔥 IMAGENS MAIORES */
+  height: 200px;
   border-radius: 12px;
   object-fit: cover;
   transition: transform 0.45s ease, box-shadow 0.45s ease;
@@ -150,7 +167,7 @@ h2 {
   color: #003366;
 }
 
-/* ANIMAÇÃO DE APARIÇÃO (FADE-IN SUAVE) */
+/* FADE-IN */
 .fade-item {
   opacity: 0;
   transform: translateY(30px);
