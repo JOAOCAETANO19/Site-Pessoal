@@ -1,170 +1,100 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* FUNDO BRANCO + BORDAS AZUL ESCURO */
+/* ======== GERAL ======== */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: white;
-  color: #000;
-  text-align: center;
-  min-height: 100vh;
-  border-left: 30px solid #003366;
-  border-right: 30px solid #003366;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #333;
 }
 
-/* TOPO - AZUL ESCURO */
+/* ======== CABEÇALHO ======== */
 header {
-  background-color: #003366;
-  color: white;
-  padding: 20px;
-  font-size: 28px;
-  font-weight: bold;
-  position: relative;
+    background: #001f3f; /* azul escuro */
+    padding: 25px 0;
+    text-align: center;
+    color: white;
+    border-bottom: 6px solid #00183a; 
 }
 
-/* ÍCONES */
-.icons {
-  position: absolute;
-  top: 15px;
-  right: 20px;
+header h1 {
+    font-size: 32px;
+    margin: 0;
 }
 
-.icons a img {
-  width: 35px;
-  margin: 0 8px;
-  transition: transform 0.3s ease;
+header h2 {
+    margin-top: 5px;
+    font-size: 16px;
+    opacity: 0.8;
 }
 
-.icons a img:hover {
-  transform: scale(1.2);
+/* ======== ANIMAÇÃO DE MÁQUINA DE ESCREVER ======== */
+.typewriter-container {
+    margin: 30px auto 0 auto;
+    text-align: center;
 }
 
-/* MÁQUINA DE ESCREVER PRINCIPAL */
-#typewriter {
-  font-size: 32px;
-  margin: 20px 0 5px 0;
-  color: #003366;
-  font-weight: bold;
-  border-right: 3px solid #003366;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  white-space: nowrap;
-  overflow: hidden;
+.typewriter-text {
+    font-size: 22px;
+    font-weight: bold;
+    border-right: 3px solid #001f3f;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    color: #001f3f;
 }
 
-/* NOME EMBAIXO DA FRASE */
-#subtypewriter {
-  font-size: 18px;
-  margin-top: 5px;
-  color: #003366;
-  font-weight: bold;
-  border-right: 2px solid #003366;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  white-space: nowrap;
-  overflow: hidden;
+/* ======== SEÇÃO COISAS QUE EU GOSTO ======== */
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;  /* antes era 120px / 180px — AGORA ESTÁ AJUSTADO */
+    color: #001f3f;
 }
 
-/* FOTO PRINCIPAL */
-.foto {
-  perspective: 900px;
-}
-
-.foto img {
-  width: 420px;
-  height: 280px;
-  border-radius: 20px;
-  object-fit: cover;
-  margin: 30px auto;
-  border: 5px solid #003366;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  transition: transform 0.45s ease, box-shadow 0.45s ease;
-  transform-style: preserve-3d;
-}
-
-.foto:hover img {
-  transform: scale(1.08) rotateY(8deg) translateZ(18px);
-  box-shadow: 0 30px 45px rgba(0, 0, 0, 0.45);
-}
-
-/* DATA DE NASCIMENTO */
-.nascimento {
-  font-size: 20px;
-  margin-top: -15px;
-  color: #003366;
-}
-
-/* ======= SEÇÃO DAS IMAGENS ======= */
-
-/* Espaçamento corrigido */
-.favorites-section {
-  margin-top: 60px; /* 🔥 NOVO ESPAÇAMENTO */
-}
-
-/* TÍTULOS */
-h2 {
-  font-size: 26px;
-  color: #003366;
-  margin-bottom: 20px;
-}
-
-/* ITENS */
-.gostos {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin: 40px 0;
+/* ======== GALERIA DE ITENS ======== */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+    padding-bottom: 80px;
 }
 
 .item {
-  background: #e3f2fd;
-  padding: 15px;
-  border-radius: 20px;
-  width: 240px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-  transition: transform 0.45s ease, box-shadow 0.45s ease;
-  perspective: 900px;
-}
-
-.item:hover {
-  transform: scale(1.07) rotateY(6deg);
-  box-shadow: 0 20px 30px rgba(0, 51, 102, 0.35);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .item img {
-  width: 100%;
-  height: 180px;
-  border-radius: 12px;
-  object-fit: cover;
-  transition: transform 0.45s ease, box-shadow 0.45s ease;
+    width: 260px;
+    height: auto;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.item img:hover {
-  transform: scale(1.08) rotateY(6deg);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+/* ======== EFEITO 3D AO PASSAR O MOUSE ======== */
+.item:hover img {
+    transform: perspective(800px) rotateX(8deg) rotateY(8deg) scale(1.05);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.25);
 }
 
+/* ======== TEXTO DAS IMAGENS ======== */
 .item p {
-  font-weight: bold;
-  margin-top: 10px;
-  color: #003366;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #001f3f;
 }
 
-/* ANIMAÇÃO DE APARIÇÃO (FADE-IN SUAVE) */
-.fade-item {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+/* ======== ANIMAÇÃO FADE-IN ======== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
-.fade-item.ativo {
-  opacity: 1;
-  transform: translateY(0);
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
