@@ -58,7 +58,7 @@ header {
 }
 
 /* SUBTÍTULO COM MÁQUINA DE ESCREVER */
-#subtypewriter {
+#subTypewriter {
   font-size: 20px;
   margin-top: 6px;
   color: #003366;
@@ -120,7 +120,7 @@ h2 {
   background: #e3f2fd;
   padding: 15px;
   border-radius: 20px;
-  width: 240px;
+  width: 260px;                 /* AUMENTADO PARA CABER IMAGEM MAIOR */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
   transition: transform 0.45s ease, box-shadow 0.45s ease;
   perspective: 900px;
@@ -133,7 +133,7 @@ h2 {
 
 .item img {
   width: 100%;
-  height: 180px;
+  height: 220px;                /* 🔥 IMAGENS MAIORES */
   border-radius: 12px;
   object-fit: cover;
   transition: transform 0.45s ease, box-shadow 0.45s ease;
